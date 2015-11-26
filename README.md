@@ -1,5 +1,5 @@
 # OSX g-code Octoprint autosync
-This scripts auto syncs a gcode folder from my mac to my raspberry pi running octopi through ssh. I think it may work with linux too.
+This scripts auto syncs a gcode folder from my mac to the uploads folder on my raspberry pi running octoprint through ssh. I think it may work with linux too.
 
 You'll need fswatch ( https://github.com/emcrisostomo/fswatch ) to listen for changes in the origin folder (on mac just run " brew install fswatch ").
 
