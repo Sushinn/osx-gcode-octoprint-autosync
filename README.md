@@ -8,14 +8,15 @@ Also you want to put you ssh key on the rasp, so you can login without password.
 
 ```
 host octopi
-        HostName my-ddns-address.ddns.net
-        Port 222
+        HostName your.raspberry.ip
+        Port 22
         User pi
         ForwardX11Trusted yes
         ForwardX11 yes
 ```
 
 Just change the HostName to the IP of your raspberry, as the Port.
+**Protip**: Open the rasp port to the internet and define a DDNS on yout router for WAN ssh (you can use www.noip.com )
 
 **What you need to edit:**
 
