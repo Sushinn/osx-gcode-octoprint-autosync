@@ -21,6 +21,6 @@ Just change the HostName to the IP of your raspberry, as the Port.
 
 * listenFolder.sh: The path to **syncToOctopi.sh** and the **folder to be watch**
 * syncToOctopi.sh: The path to the **origin folder**, the ssh part (mine is defined on ~/.ssh/config) and the path to the **destination folder (probably ~/.octoprint/uploads/)**
-* com.granzotto.syncfolder.plist: The path to **listenFolder.sh**, if you want to use OS X's launchctl
+* com.granzotto.syncfolder.plist: If you want to use OS X's launchctl, change the **WorkingDirectory** to your **~/** and the path to listenFolder.sh (in **ProgramArguments**)
 
-Then just run listenFolder.sh and when you save a new .gcode file in the folder, it will appear on your octoprint uploads
+Then just run listenFolder.sh and when you save a new .gcode file in the folder, it will appear on your octoprint uploads (may need to reload the page to see the new g-code)
