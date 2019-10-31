@@ -26,3 +26,7 @@ Just change the HostName to the IP of your raspberry, as the Port.
 * delete-all-gcodes: This will delete all local and remote g-codes, you just need to change both paths
 
 Then just run listenFolder.sh and when you save a new .gcode file in the folder, it will appear on your octoprint uploads (may need to reload the page to see the new g-code)
+
+# WARNING!
+
+This may be broken in Mac OS Catalina. It needs more investigation.
