@@ -23,7 +23,10 @@ Just change the HostName to the IP of your raspberry, as the Port.
 * listenFolder.sh: The path to **syncToOctopi.sh** and the **folder to be watch**
 * Move `listenFolder.sh` to `/Applications/`. This is needed on MacOS Catalina
 * syncToOctopi.sh: The path to the **origin folder**, the ssh part (mine is defined on ~/.ssh/config) and the path to the **destination folder (probably ~/.octoprint/uploads/)**
-* com.granzotto.syncfolder.plist: If you want to use macOS' launchctl, change the **WorkingDirectory** to your **~/** and the path to listenFolder.sh (in **ProgramArguments**)
+* com.granzotto.syncfolder.plist: If you want to use macOS' launchctl, change the **WorkingDirectory** to your **~/** and the path to listenFolder.sh (in **ProgramArguments**). Then move the plist file to `~/Library/LaunchAgent` and use the command:
+```bash
+launchctl load ~/Library/LaunchAgent/com.granzotto.syncfolder.plist
+```
 * delete-all-gcodes: This will delete all local and remote g-codes, you just need to change both paths
 
 Then just run listenFolder.sh and when you save a new .gcode file in the folder, it will appear on your octoprint uploads (may need to reload the page to see the new g-code)
